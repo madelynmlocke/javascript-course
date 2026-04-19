@@ -1,4 +1,11 @@
-const todoList = ['make dinner', 'wash dishes'];
+const todoList = [{ 
+  name: 'make dinner', 
+  dueDate: '2026-06-07'
+}, 
+{ 
+  name:'wash dishes', 
+  dueDate: '2026-05-15'
+}];
 
 renderTodoList();
 
@@ -6,11 +13,19 @@ function renderTodoList() {
   let todoListHTML = ''; //accumulator variable
 
   for(let i = 0; i < todoList.length; i++) { // loop array
-    const todo = todoList[i]; //assign singular index 
-    const html = `<p>${todo}</p>`; //create html each index
+    const todoObject = todoList[i]; //assign singular index 
+    const name = todoObject.name;
+    const dueDate = todoObject.dueDate;
+    const html = `
+      <div>${name}</div>
+      <div>${dueDate}</div>
+        <button onclick="
+          todoList.splice(${i}, 1);
+          renderTodoList();
+        " class="delete-button">Delete</button>
+    `; //create html each index
     todoListHTML += html;
   }
-  console.log(todoListHTML);
 
   document.querySelector('.js-todo-list')
     .innerHTML = todoListHTML;
@@ -18,11 +33,16 @@ function renderTodoList() {
 
 function addTodo() {
   const todoInput = document.querySelector('.js-input');
+  const name = todoInput.value;
+ 
+  const date = document.querySelector('.js-date');
+  const dueDate = date.value;
 
-  todoList.push(todoInput.value);
-  console.log(todoList);
+  todoList.push({
+    name: name,
+    dueDate: dueDate
+  });
 
   todoInput.value = '';
-
   renderTodoList();
 }
