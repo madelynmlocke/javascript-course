@@ -107,4 +107,19 @@ function countPositive(nums) {
 console.log(countPositive([1, -1, 15, -3]));
 console.log(countPositive([1, -1, 15, -3, -7, 1]));
 
+function minMax (nums) {
+  const result = {min: [0], max: [0]}; //starts with the 1st value in the 1st index for comparison reasons
+  for(let i = 0; i < nums.length; i++) {
+    if(nums[i] < result.min) {
+      result.min = nums[i];
+    } 
 
+    if(nums[i] > result.max) {
+      result.max = nums[i];
+    }
+  }
+  return result;
+}
+
+console.log(minMax([1, -3, 5]));
+console.log(minMax([-2, 3, -5, 7, 10]));
