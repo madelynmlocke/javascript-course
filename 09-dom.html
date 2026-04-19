@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+<body>
+
+  <!-- <button>hello</button>
+  <button class="js-button">Second button</button> -->
+
+  <!-- <button>9a</button> -->
+
+  <!-- <button class="js-heads" onclick="
+    document.querySelector('.js-choice').innerHTML = `You chose heads`;
+  ">heads</button>
+  <button class="js-tails" onclick="
+    document.querySelector('.js-choice').innerHTML = `You chose tails`;
+  ">tails</button> -->
+  <!-- <p class="js-choice"></p> -->
+
+  <input placeholder="Name" class="js-name" onkeydown="
+    myNameKeydown(event);
+  ">
+
+  <button class="js-submit" onclick="
+    myname();
+  ">Submit</button>
+
+  <p class="js-text"></p>
+
+  <script>
+
+    function myNameKeydown(event) {
+      if (event.key === 'Enter') {
+        myName();
+      }
+    }
+
+    function myName() {
+      const text = document.querySelector('.js-name').value;
+      document.querySelector('.js-text').innerHTML = `Your name is: ${text}`;
+    }
+
+    // console.log(document.title);
+
+    // // document.body.innerHTML = 'hello';
+    // document.title = 'good job';
+
+    // console.log(document.body);
+    // console.log(typeof document.body);
+
+    // document.body.innerHTML = '<button>different button</button>';
+
+    // console.log(document.querySelector('button').innerHTML);
+    // document.querySelector('button')
+    //   .innerHTML = 'Changed'; //easier to read on line
+
+    // let buttonElement = document.querySelector('.js-button').innerHTML;
+    // console.log(buttonElement);
+
+    // let button = document.querySelector('button');
+    // console.log(button.innerText);
+    // button.innerText = '9b';
+    // console.log(button.innerText);
+
+  </script>
+
+</body>
+</html>
