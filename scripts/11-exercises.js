@@ -82,44 +82,63 @@ const numArray2 = [ 10, 20, 30 ];
 
 // console.log(addNum(numArray, 10));
 
-function addArrays(array1, array2) {
-  const result = [];
-  for(let i = 0; i < array1.length; i++) {
-    let index1 = array1[i];
-    let index2 = array2[i];
-    result.push(index1 + index2);
-  }
-  return result;
-}
+// function addArrays(array1, array2) {
+//   const result = [];
+//   for(let i = 0; i < array1.length; i++) {
+//     let index1 = array1[i];
+//     let index2 = array2[i];
+//     result.push(index1 + index2);
+//   }
+//   return result;
+// }
 
-console.log(addArrays(numArray, numArray2));
+// console.log(addArrays(numArray, numArray2));
 
-function countPositive(nums) {
-  let result = 0;
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] > 0 ) {
-      result++;
+// function countPositive(nums) {
+//   let result = 0;
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] > 0 ) {
+//       result++;
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(countPositive([1, -1, 15, -3]));
+// console.log(countPositive([1, -1, 15, -3, -7, 1]));
+
+// function minMax (nums) {
+//   const result = {min: [0], max: [0]}; //starts with the 1st value in the 1st index for comparison reasons
+//   for(let i = 0; i < nums.length; i++) {
+//     if(nums[i] < result.min) {
+//       result.min = nums[i];
+//     } 
+
+//     if(nums[i] > result.max) {
+//       result.max = nums[i];
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(minMax([1, -3, 5]));
+// console.log(minMax([-2, 3, -5, 7, 10]));
+
+function countWords(words) {
+  const result = {};
+
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+
+    if (result[word] === true) {
+      result[word]++;
+    } else {
+      result[word] = 1;
     }
   }
   return result;
 }
 
-console.log(countPositive([1, -1, 15, -3]));
-console.log(countPositive([1, -1, 15, -3, -7, 1]));
+console.log(countWords(['apple', 'apple', 'grape']));
+console.log(countWords(['banana', 'grape', 'apple', 'grape']));
 
-function minMax (nums) {
-  const result = {min: [0], max: [0]}; //starts with the 1st value in the 1st index for comparison reasons
-  for(let i = 0; i < nums.length; i++) {
-    if(nums[i] < result.min) {
-      result.min = nums[i];
-    } 
-
-    if(nums[i] > result.max) {
-      result.max = nums[i];
-    }
-  }
-  return result;
-}
-
-console.log(minMax([1, -3, 5]));
-console.log(minMax([-2, 3, -5, 7, 10]));
