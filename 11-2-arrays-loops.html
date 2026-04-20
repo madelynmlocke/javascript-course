@@ -77,20 +77,69 @@
     // console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'));
     // console.log(findIndex(['green', 'red', 'blue', 'red'], 'yellow'));
 
-    function removeEgg(foods) {
-      let result = [];
-      for(let i = 0; i < foods.length; i++) {
-        const food = foods[i];
-        if(food === 'egg') {
-          continue;
-        } else {
-          result.push(food);
-        }
-      }
-      return result;
-    }
+    // function removeEgg(foods) {
+    //   let result = [];
+    //   for(let i = 0; i < foods.length; i++) {
+    //     const food = foods[i];
+    //     if(food === 'egg') {
+    //       continue;
+    //     } else {
+    //       result.push(food);
+    //     }
+    //   }
+    //   return result;
+    // }
 
-    console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+    // console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+    // function removeEgg(foods) {
+    //   let result = [];
+    //   let removeEgg = 0;
+    //   for(let i = 0; i < foods.length; i++) {
+    //     const food = foods[i];
+    //     if(food === 'egg' && removeEgg < 2) {
+    //       removeEgg++;
+    //       continue;
+    //     } else {
+    //       result.push(food);
+    //     }
+    //   }
+    //   return result;
+    // }
+
+    // console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+    // function removeEgg(foods) {
+
+    //   const reversedFoods = foods.reverse();
+    //   const result = [];
+    //   let removeEgg = 0;
+
+    //   for(let i = 0; i < reversedFoods.length; i++) {
+    //     const food = reversedFoods[i];
+
+    //     if(food === 'egg' && removeEgg < 2) {
+    //       removeEgg++;
+    //       continue;
+    //     } 
+    //     result.push(food);
+    //   }
+    //   return result.reverse();
+    // }
+
+    // console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+    for(let i = 1; i <= 20; i++) {
+      if (i % 3 === 0 && i % 5 === 0) {
+        console.log('fizzbuzz');
+      } else if (i % 5 === 0) {
+        console.log('buzz');
+      } else if (i % 3 === 0) {
+        console.log('fizz');
+      } else {
+        console.log(i);
+      }
+    }
 
   </script>
   
