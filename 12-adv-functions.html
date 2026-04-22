@@ -5,7 +5,48 @@
   </head>
 <body>
 
+  <button class="start-btn" onclick="
+    updateButton();
+    ">Start</button>
+
+    <button class="cart-btn" onclick="
+    addToCart2();
+    ">Add to cart</button>
+
+    <p class="message"></p>
+
   <script>
+
+    // function updateButton() {
+    //   const btn = document.querySelector('.start-btn');
+    //   btn.innerHTML = 'Loading...';
+    //   setTimeout(function() {
+    //     btn.innerHTML = 'Finished!';
+    //   }, 1000);
+    // }
+  
+    // function addToCart() {
+    //   const msg = document.querySelector('.message');
+    //   msg.innerHTML = 'Added';
+    //     setTimeout(function() {
+    //       msg.innerHTML = '';
+    //     }, 2000);
+    // }
+
+      let timeOutId;
+
+      function addToCart2() {
+        const msg = document.querySelector('.message');
+        msg.innerHTML = 'Added';
+
+        clearTimeout(timeOutId);
+
+        timeOutId = setTimeout(function() {
+          msg.innerHTML = '';
+        }, 2000);
+        
+    }
+
     // function greeting() {
     //   console.log('hello');
     // }
@@ -46,20 +87,45 @@
     //   console.log('hello4');
     // });
 
-    setTimeout(function() {
-      console.log('timeout');
-    }, 3000);
+    // setTimeout(function() {
+    //   console.log('timeout');
+    // }, 3000);
 
-    console.log('next line');
-
-
-    setInterval(function() {
-      console.log('interval');
-    }, 3000);
-
-    console.log('next line 2');
+    // console.log('next line');
 
 
+    // setInterval(function() {
+    //   console.log('interval');
+    // }, 3000);
+
+    // console.log('next line 2');
+
+    //  [
+    //   'make dinner',
+    //   'wash dishes',
+    //   'watch youtube'
+    //  ].forEach(function(value, index) {
+    //   if(value === 'wash dishes') {
+    //     return;
+    //   }
+    //   console.log(value, index);
+    //  });
+
+    // const add = function() {
+    //   console.log(2 + 3);
+    // };
+
+    // function runTwice(fun) { // can pass ANY function into it to run twice
+    //   fun();
+    //   fun();
+    // }
+
+    // runTwice(function() {
+    //   console.log('12b');
+    // });
+
+    // runTwice(add);
+  
 
 
 
